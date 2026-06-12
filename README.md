@@ -10,7 +10,7 @@ En este `README.md` se especifican los cambios encontrados por nuestro equipo en
 
 - Se añadió el `import` para la dependencia de Supabase.
 - Se añadió la `url` y `anon_key` para el acceso a la base de datos de Supabase.
-- `main()` cambio a ser una función `async` con `WidgetsFlutterBinding.ensureInitialized()`.
+- Se paso de usar `context.watch<MusicProvider>()` a usarse `Consumer<MusicProvider>`
 
 ### `lib/models/track.dart`
 
@@ -26,6 +26,12 @@ En este `README.md` se especifican los cambios encontrados por nuestro equipo en
 - - `selectedItemColor: Theme.of(context).colorScheme.primary`
 - - `unselectedItemColor: Colors.grey`
 - Los items en `BottomNavigatorBar` pasaron a ser `const`.
+
+### `lib/screens/search_screens.dart`
+
+- Se añadió el import de `lib/screens/track_detail_screen.dart`
+- Se cambio el `GestureDetector` de ser una llamada directa a `MusicProvider.playTrack(track)` a que el `onTap` navegue a `TrackDetailScreen(track: track)`
+- Se cambio el `Stack` que mostraba la imagen junto al icono de reproducir/pausar superpuesto a ser un `hero` widget con `ClipRReact` sin tener el icono de reproducir/pausar superpuesto.
 
 ## Dependencias nuevas
 
