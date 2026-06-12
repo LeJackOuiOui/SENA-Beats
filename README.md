@@ -32,6 +32,7 @@ En este `README.md` se especifican los cambios encontrados por nuestro equipo en
 - Se añadió el import de `lib/screens/track_detail_screen.dart`
 - Se cambio el `GestureDetector` de ser una llamada directa a `MusicProvider.playTrack(track)` a que el `onTap` navegue a `TrackDetailScreen(track: track)`
 - Se cambio el `Stack` que mostraba la imagen junto al icono de reproducir/pausar superpuesto a ser un `hero` widget con `ClipRReact` sin tener el icono de reproducir/pausar superpuesto.
+- Se añadio un `errorBuilder` para mostrar un icono de `Icons.broken_image` en un `Container` gris oscuro
 
 ## Dependencias nuevas
 
