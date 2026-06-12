@@ -20,9 +20,9 @@ class _MainScreenState extends State<MainScreen> {
   // Lista de pantallas para navegar
   final List<Widget> _pages = [
     const SearchScreen(),
+    const RemoteMissionsScreen(),
     const FavouritesScreen(),
     const ProfileScreen(),
-    const RemoteMissionsScreen(),
   ];
 
   @override
@@ -73,23 +73,15 @@ class _MainScreenState extends State<MainScreen> {
     }
 
     return Scaffold(
-      body: IndexedStack(
-        index: _currentIndex,
-        children: _pages,
-      ),
+      body: IndexedStack(index: _currentIndex, children: _pages),
       bottomNavigationBar: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
           const MiniPlayer(),
           BottomNavigationBar(
-            type: BottomNavigationBarType
-                .fixed, 
-            backgroundColor: Theme.of(
-              context,
-            ).colorScheme.surface, 
-            selectedItemColor: Theme.of(
-              context,
-            ).colorScheme.primary,
+            type: BottomNavigationBarType.fixed,
+            backgroundColor: Theme.of(context).colorScheme.surface,
+            selectedItemColor: Theme.of(context).colorScheme.primary,
             unselectedItemColor: Colors.grey,
             currentIndex: _currentIndex,
             onTap: (index) => setState(() => _currentIndex = index),
