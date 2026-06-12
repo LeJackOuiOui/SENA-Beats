@@ -10,6 +10,7 @@ En este `README.md` se especifican los cambios encontrados por nuestro equipo en
 
 - Se añadió el `import` para la dependencia de Supabase.
 - Se añadió la `url` y `anon_key` para el acceso a la base de datos de Supabase.
+- `main()` cambio a ser una función `async` con `WidgetsFlutterBinding.ensureInitialized()`.
 
 ### `lib/models/track.dart`
 
@@ -19,6 +20,12 @@ En este `README.md` se especifican los cambios encontrados por nuestro equipo en
 
 - Se añadió el `import` para acceder a `remote_missions_screen.dart`.
 - Se añadió una opción en `BottomNavigatorBar` para permitir el acceso a `remote_missions_screen.dart`.
+- En `BottomNavigatorBar` se agregaron las propiedades de:
+- - `type: BottomNavigationBarType.fixed`
+- - `backgroundColor: Theme.of(context).colorScheme.surface`
+- - `selectedItemColor: Theme.of(context).colorScheme.primary`
+- - `unselectedItemColor: Colors.grey`
+- Los items en `BottomNavigatorBar` pasaron a ser `const`.
 
 ## Dependencias nuevas
 
